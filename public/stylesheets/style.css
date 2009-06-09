@@ -1,5 +1,4 @@
 * {
-  font-family: "HelveticaNeue-Light";
   color: #444;
 }
 
@@ -12,8 +11,9 @@ a {
   text-decoration: none;
 }
 
-p {
-  font-family: "HelveticaNeue-Light";
+p, h2, h3 {
+  font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
 
 #main {
@@ -21,25 +21,20 @@ p {
   padding-left: 200px;
 }
 
-h1, h2, h3 {
-  font-family: "HelveticaNeue-UltraLight";
+h1, h1 .r {
+  font-family: "Helvetica Neue", "HelveticaNeue-UltraLight", "Helvetica Neue UltraLight", Helvetica, Arial, sans-serif;
+  font-weight: 100;
 }
 
 h1 {
-  font-weight: normal;
   margin-bottom: 40px;
   background-color: #00DCC2;
   padding: 10px 0 10px 200px;
   color: #fff;
 }
 
-h1, h2 {
-
-}
-
 .r {
   color: #fff;
-  font-family: "HelveticaNeue-UltraLight";
   letter-spacing: .12em;
 }
 
@@ -87,5 +82,6 @@ ul.portfolio li {
 }
 
 #footer {
+  clear: both;
   color: #aaa;
 }
