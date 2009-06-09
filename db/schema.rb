@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090609014938) do
+ActiveRecord::Schema.define(:version => 20090609025724) do
 
   create_table "project_links", :force => true do |t|
     t.integer  "project_id"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20090609014938) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
+    t.text     "excerpt"
   end
 
   add_index "projects", ["slug"], :name => "index_projects_on_slug", :unique => true

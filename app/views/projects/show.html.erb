@@ -1,5 +1,13 @@
 <%
 @full_title = 'portfolio of ryan berdeen'
-@page_title = 'portfolio'
+@page_title = @project.title
 %>
 <%= render :partial => "#{@project.media.first.media_type}_media", :locals => {:media => @project.media.first} %>
+
+<p><%= @project.description %></p>
+
+<% unless @project.primary_links.empty? %><p class="links">
+  <% @project.primary_links.each do |link| %>
+  <a href="<%= link.url %>"><%= link.link_text %></a>
+  <% end %>
+</p><% end %>

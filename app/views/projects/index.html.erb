@@ -11,12 +11,13 @@
     </div>
     <div class="description">
       <h3><%= link_to project.title, project_url(project) %></h3>
-      <%= project.description %>
-      <% unless project.primary_links.empty? %><p class="links">
+      <%= project.excerpt %>
+      <p class="links">
+        <%= link_to 'more info', project_url(project) %>
         <% project.primary_links.each do |link| %>
         <a href="<%= link.url %>"><%= link.link_text %></a>
         <% end %>
-      </p><% end %>
+      </p>
     </div>
   </li><% end %>
 </ul>
