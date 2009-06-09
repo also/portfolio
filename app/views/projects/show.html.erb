@@ -1,0 +1,5 @@
+<%
+@full_title = 'portfolio of ryan berdeen'
+@page_title = 'portfolio'
+%>
+<%= render :partial => "#{@project.media.first.media_type}_media", :locals => {:media => @project.media.first} %>

@@ -6,12 +6,12 @@
   <li>
     <div class="work">
       <% if project.media.first %>
-        <%= render :partial => "#{project.media.first.media_type}_media", :locals => {:media => project.media.first} %>
+        <%= render :partial => "#{project.media.first.media_type}_media_preview", :locals => {:media => project.media.first} %>
       <% end %>
     </div>
     <div class="description">
-      <h3><%= project.title %></h3>
-      <p><%= project.description %></p>
+      <h3><%= link_to project.title, project_url(project) %></h3>
+      <%= project.description %>
       <% unless project.primary_links.empty? %><p class="links">
         <% project.primary_links.each do |link| %>
         <a href="<%= link.url %>"><%= link.link_text %></a>
