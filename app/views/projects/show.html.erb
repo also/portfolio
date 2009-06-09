@@ -4,7 +4,7 @@
 %>
 <%= render :partial => "#{@project.media.first.media_type}_media", :locals => {:media => @project.media.first} %>
 
-<p><%= @project.description %></p>
+<%= @project.description %>
 
 <% unless @project.primary_links.empty? %><p class="links">
   <% @project.primary_links.each do |link| %>
